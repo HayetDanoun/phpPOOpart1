@@ -5,9 +5,9 @@ class Car{
     private int $currentSpeed;
     private string $color;
     private int $nbSeats;
-    private string $typeEnergie;
+    private string $energy;
 
-    private int $levelCarburant;
+    private int $energyLevel;
 
     public function __construct(string $color){
         $this->color = $color;
@@ -16,8 +16,8 @@ class Car{
     public function getCurrentSpeed():int { return $this->currentSpeed ;}
     public function getColor(): string { return $this->color;}
     public function getNbSeats():int { return $this->nbSeats ;}
-    public function getTypeEnergie(): string { return $this->typeEnergie;}
-    public function getLevelCarburant(): int { return $this->levelCarburant;}
+    public function getEnergy(): string { return $this->energy;}
+    public function getEnergyLevel(): int { return $this->energyLevel;}
  
 
     public function setNbWheels(int $nbWheels): void { 
@@ -38,14 +38,14 @@ class Car{
             $this->nbSeats = $nbSeats;
         }
     }
-    public function setTypeEnergie(int $typeEnergie): void { 
-        if($typeEnergie >= 0) {
-            $this->typeEnergie = $typeEnergie;
+    public function setEnergy(int $energy): void { 
+        if($energy >= 0) {
+            $this->energy = $energy;
         }
     }
 
-    public function setLevelCarburant(int $levelCarburant): void { 
-        $this->levelCarburant = $levelCarburant;
+    public function setEnergyLevel(int $energyLevel): void { 
+        $this->energyLevel = $energyLevel;
     }
 
     public function start(){}
